@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Garba Classes - Utsav Garba</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --garba-orange: #FF7F24;
+            --garba-green: #2E8B57;
+            --garba-pink: #FF69B4;
+            --text-dark: #333;
+            --text-light: #f8f8f8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--garba-orange), var(--garba-pink));
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--garba-orange);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+            margin: 0.5rem;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .secondary-button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--garba-orange);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        h3 {
+            color: var(--garba-green);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .step-list {
+            list-style-position: inside;
+            margin: 1rem 0;
+        }
+        
+        .step-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .what-you-learn {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .learn-card {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            border-left: 4px solid var(--garba-green);
+        }
+        
+        .learn-card h4 {
+            color: var(--garba-green);
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial {
+            background-color: #f0f8ff;
+            border-left: 4px solid var(--garba-orange);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+        
+        .author {
+            font-weight: bold;
+            margin-top: 0.5rem;
+            text-align: right;
+        }
+        
+        .video-placeholder {
+            background-color: #eee;
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        
+        .video-placeholder svg {
+            width: 100px;
+            height: 100px;
+            fill: var(--garba-pink);
+        }
+        
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+        
+        .faq-item h4 {
+            color: var(--garba-orange);
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-card {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--garba-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .social-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+        
+        .facebook { background-color: #3b5998; }
+        .instagram { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+        .youtube { background-color: #ff0000; }
+        .linkedin { background-color: #0077b5; }
+        
+        .social-link:hover {
+            transform: scale(1.1);
+        }
+        
+        footer {
+            background: linear-gradient(90deg, var(--garba-green), var(--garba-orange));
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .chat-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, var(--garba-orange), var(--garba-pink));
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Beginner Garba Classes</h1>
+            <p class="subtitle">Start your dance journey with our welcoming, easy-to-follow lessons</p>
+            <div class="cta-buttons">
+                <a href="#register" class="cta-button">Join Today</a>
+                <a href="#contact" class="cta-button secondary-button">Contact Us</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2>Perfect for First-Time Dancers</h2>
+            <p>Our beginner Garba classes are specially designed for those who have never danced before or have minimal experience. We break down each step slowly and focus on building your confidence along with your skills.</p>
+            
+            <h3>What You'll Learn</h3>
+            <div class="what-you-learn">
+                <div class="learn-card">
+                    <h4>Basic Steps</h4>
+                    <p>Master the fundamental footwork patterns that form the foundation of Garba</p>
+                </div>
+                <div class="learn-card">
+                    <h4>Rhythm & Timing</h4>
+                    <p>Develop your sense of rhythm to dance in sync with traditional music</p>
+                </div>
+                <div class="learn-card">
+                    <h4>Hand Movements</h4>
+                    <p>Learn graceful hand gestures that complement the footwork</p>
+                </div>
+            </div>
+            
+            <div class="video-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                </svg>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Your First Class</h2>
+            <p>Here's what to expect when you join your first beginner Garba class:</p>
+            
+            <ol class="step-list">
+                <li><strong>Warm welcome:</strong> We'll introduce you to the class and our teaching approach</li>
+                <li><strong>Gentle warm-up:</strong> Simple stretches to prepare your body</li>
+                <li><strong>Basic stance:</strong> Learning the proper posture for Garba</li>
+                <li><strong>First steps:</strong> Clapping rhythm with basic footwork</li>
+                <li><strong>Practice circle:</strong> Trying simple movements in a group circle</li>
+                <li><strong>Cool down:</strong> Wind down with stretching and questions</li>
+            </ol>
+            
+            <div class="testimonial">
+                <p>"As someone who had never danced before, I was nervous to join my first Garba class. The instructor made everything so easy to understand, and after just four sessions I was dancing in time with the group!"</p>
+                <p class="author">- Riya Patel, Beginner Student</p>
+            </div>
+        </section>
+        
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Have questions about our beginner classes? Get in touch through any of these methods:</p>
+            
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Phone</h4>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>beginner@utsavgarba.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Location</h4>
+                    <p>123 Dance Street<br>Community Center<br>Gujarat</p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://facebook.com/utsavgarba" class="social-link facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/utsavgarba" class="social-link instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/utsavgarba" class="social-link youtube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://linkedin.com/company/utsavgarba" class="social-link linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Beginner FAQs</h2>
+            
+            <div class="faq-item">
+                <h4>Do I need any dance experience?</h4>
+                <p>No prior experience is needed! We start with absolute basics and move at a pace comfortable for everyone.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>What should I wear?</h4>
+                <p>Comfortable clothes that allow movement, and shoes with good support (or barefoot if preferred). Traditional attire is not required.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>What if I can't keep up?</h4>
+                <p>Our instructors give individual attention and repeat steps as needed. Small class sizes ensure no one gets left behind.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>How long until I see progress?</h4>
+                <p>Most beginners pick up the basic steps within 2-3 classes and feel comfortable with simple Garba patterns after 4-6 weeks.</p>
+            </div>
+        </section>
+        
+        <section id="register" class="section">
+            <h2>Start Your Garba Journey</h2>
+            <p>Join our next beginner session starting on <strong>Monday, October 2nd</strong> at <strong>6:30PM</strong>.</p>
+            <p>First class is free for new students!</p>
+            
+            <form style="margin-top: 2rem;">
+                <div style="margin-bottom: 1rem;">
+                    <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Full Name</label>
+                    <input type="text" id="name" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;" required>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+                    <input type="email" id="email" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;" required>
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Phone Number</label>
+                    <input type="tel" id="phone" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <button type="submit" style="background: linear-gradient(90deg, var(--garba-orange), var(--garba-pink)); color: white; border: none; padding: 1rem 2rem; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 1rem;">Reserve My Spot</button>
+            </form>
+        </section>
+    </div>
+    
+    <footer>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h3 style="margin-bottom: 1rem;">Utsav Garba Beginner Classes</h3>
+            <div class="social-links" style="margin: 1rem 0;">
+                <a href="https://facebook.com/utsavgarba" class="social-link facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/utsavgarba" class="social-link instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/utsavgarba" class="social-link youtube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://linkedin.com/company/utsavgarba" class="social-link linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <p>Community Center • 123 Dance Street, Gujarat</p>
+            <p style="margin-top: 1rem;">© 2023 Utsav Garba. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <a href="#" class="chat-button" aria-label="Chat with us">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+    
+    <script>
+        // Simple form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for signing up! We\'ve sent confirmation details to your email.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

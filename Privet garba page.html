@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Garba Classes - Personalized Traditional Dance Instruction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --garba-purple: #6a0dad;
+            --garba-gold: #FFD700;
+            --garba-pink: #FF69B4;
+            --text-dark: #333;
+            --text-light: #f8f8f8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #faf5ff;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--garba-purple), var(--garba-pink));
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .dandiya-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5l6 3.75v.94l-6 6.01-6-6.01v-.94L12 4.5zm0 12.29l6-3.76V15l-6 4-6-4v1.03l6 3.76z"/></svg>') no-repeat;
+            background-size: contain;
+            opacity: 0.2;
+            animation: float 5s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--garba-gold);
+            color: var(--garba-purple);
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .secondary-button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        .private-section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--garba-gold);
+        }
+        
+        h2 {
+            color: var(--garba-purple);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--garba-purple), var(--garba-pink));
+            border-radius: 3px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, #f9f5ff, #f0e6ff);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: transform 0.3s;
+            border-left: 4px solid var(--garba-gold);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-card h3 {
+            color: var(--garba-purple);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .benefit-card h3 i {
+            margin-right: 10px;
+            color: var(--garba-gold);
+        }
+        
+        .instructor-profile {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            background-color: #f9f5ff;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+        
+        .instructor-photo {
+            min-width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #e6d8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 5px solid var(--garba-gold);
+        }
+        
+        .instructor-photo i {
+            font-size: 4rem;
+            color: var(--garba-purple);
+        }
+        
+        .instructor-bio h3 {
+            color: var(--garba-purple);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .instructor-bio h4 {
+            color: var(--garba-pink);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--garba-gold);
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '\201C';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(106, 13, 173, 0.1);
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            text-align: right;
+            color: var(--garba-purple);
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, var(--garba-purple), var(--garba-pink));
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .contact-card {
+            background-color: rgba(255,255,255,0.15);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255,255,255,0.25);
+        }
+        
+        .contact-card i {
+            font-size: 2.5rem;
+            color: var(--garba-gold);
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .social-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .facebook { background-color: #3b5998; }
+        .instagram { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+        .youtube { background-color: #ff0000; }
+        .linkedin { background-color: #0077b5; }
+        
+        .social-link:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        footer {
+            background-color: var(--garba-purple);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--garba-gold);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--garba-gold);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .instructor-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .instructor-photo {
+                margin-bottom: 1.5rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="dandiya-decoration" style="top: 20%; left: 10%;"></div>
+        <div class="dandiya-decoration" style="top: 70%; right: 15%; animation-delay: 0.5s;"></div>
+        <div class="header-content">
+            <h1>Private Garba Classes</h1>
+            <p class="subtitle">Personalized one-on-one instruction tailored to your dance goals</p>
+            <div class="cta-buttons">
+                <a href="#register" class="cta-button">Book Your Session</a>
+                <a href="#contact" class="cta-button secondary-button">Speak to an Instructor</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="private-section">
+            <h2>Exclusive Private Instruction</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Our private Garba classes offer undivided attention from professional instructors, customized curriculum, and flexible scheduling to accelerate your dance progress in a comfortable, private setting.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3><i class="fas fa-user"></i> Personalized Training</h3>
+                    <p>Curriculum designed specifically for your skill level, goals, and learning style with real-time feedback and adjustments.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><i class="fas fa-calendar-alt"></i> Flexible Scheduling</h3>
+                    <p>Choose your preferred time and frequency - morning, evening, or weekend sessions available at our studio or your location.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><i class="fas fa-tachometer-alt"></i> Accelerated Progress</h3>
+                    <p>Faster improvement with 100% focused attention and customized exercises to target your specific needs.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><i class="fas fa-video"></i> Video Analysis</h3>
+                    <p>Optional recorded sessions with professional analysis to help you visualize and correct technique between lessons.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><i class="fas fa-music"></i> Personalized Music</h3>
+                    <p>Learn to your favorite Garba tracks or wedding songs, with choreography customized to your selected music.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3><i class="fas fa-home"></i> Home Instruction</h3>
+                    <p>Available for in-home private lessons for individuals or small groups (additional travel fee may apply).</p>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"After struggling in group classes, I switched to private lessons and saw immediate improvement. My instructor identified exactly what I needed to work on and created exercises just for me. I went from beginner to performing at my sister's wedding in just 3 months!"</p>
+                <p class="testimonial-author">– Meera Desai, Private Student</p>
+            </div>
+            
+            <div class="instructor-profile">
+                <div class="instructor-photo">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="instructor-bio">
+                    <h3>Priya Patel</h3>
+                    <h4>Lead Private Instructor</h4>
+                    <p>With 12 years of professional Garba performance and 8 years of teaching experience, Priya specializes in personalized instruction for students of all levels. Her patient yet precise teaching style has helped hundreds of students achieve their dance goals.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="contact" class="contact-section">
+            <div class="contact-content">
+                <h2 style="color: white; border-bottom: 2px solid var(--garba-gold); padding-bottom: 10px;">Contact Us</h2>
+                <p style="margin-bottom: 2rem;">Ready to start your private Garba journey? Contact us to schedule your first session or ask questions.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                        <small>Mon-Fri: 9AM-7PM</small>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>private@utsavgarba.com</p>
+                        <small>Response within 24 hours</small>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Studio</h3>
+                        <p>789 Private Lesson Lane</p>
+                        <small>By appointment only</small>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://facebook.com/utsavgarba" class="social-link facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com/utsavgarba" class="social-link instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/utsavgarba" class="social-link youtube" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/utsavgarba" class="social-link linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="register" class="private-section">
+            <h2

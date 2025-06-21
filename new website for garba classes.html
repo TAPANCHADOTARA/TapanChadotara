@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utsav Garba Classes | Learn Traditional Gujarati Dance</title>
+  <meta name="description" content="Professional Garba dance classes with expert instructors for all skill levels. Learn authentic Gujarati folk dance in a fun, welcoming environment.">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <style>
+    :root {
+      --primary: #FF6B35;
+      --primary-dark: #E65100;
+      --secondary: #F7C59F;
+      --cream: #FFF8F0;
+      --text: #292F36;
+      --light: #F4F4F8;
+      --accent: #EF767A;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(255, 107, 53, 0.95);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    header.scrolled {
+      background-color: rgba(255, 107, 53, 0.98);
+      padding: 10px 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo {
+      height: 60px;
+      width: auto;
+      margin-right: 15px;
+    }
+    
+    .logo-text {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    
+    /* Navigation */
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav li {
+      margin-left: 30px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      position: relative;
+      padding: 5px 0;
+      transition: all 0.3s ease;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+    
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      min-height: 700px;
+      background: linear-gradient(rgba(255, 107, 53, 0.8), rgba(255, 107, 53, 0.8)), 
+                  url('https://images.unsplash.com/photo-1604836360658-1287b50e65aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: var(--cream);
+      color: var(--primary);
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      background-color: white;
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid var(--cream);
+      color: var(--cream);
+      margin-left: 15px;
+    }
+    
+    .btn-outline:hover {
+      background-color: var(--cream);
+      color: var(--primary);
+    }
+    
+    /* Sections Common Styles */
+    .section {
+      padding: 100px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--primary);
+    }
+    
+    /* About Section */
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+    
+    .about-text {
+      flex: 1;
+    }
+    
+    .about-image {
+      flex: 1;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    .about-image::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 100%;
+      height: 100%;
+      border: 5px solid var(--primary);
+      border-radius: 10px;
+      z-index: -1;
+      opacity: 0.4;
+    }
+    
+    /* Classes Section */
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .class-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .class-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .class-card-header {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .class-card-header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .class-card:hover .class-card-header img {
+      transform: scale(1.1);
+    }
+    
+    .class-card-body {
+      padding: 25px;
+    }
+    
+    .class-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+    
+    .class-card .price {
+      font-weight: 700;
+      color: var(--accent);
+      margin: 15px 0;
+      font-size: 1.2rem;
+    }
+    
+    .class-card .btn {
+      padding: 10px 25px;
+      font-size: 0.9rem;
+      display: block;
+      text-align: center;
+    }
+    
+    /* Schedule Section */
+    .schedule-container {
+      background-color: white;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+    
+    .schedule-tabs {
+      display: flex;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .schedule-tab {
+      padding: 12px 25px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+    
+    .schedule-tab.active {
+      color: var(--primary);
+      border-bottom: 3px solid var(--primary);
+    }
+    
+    .schedule-tab:not(.active):hover {
+      color: var(--primary);
+    }
+    
+    .schedule-content {
+      display: none;
+    }
+    
+    .schedule-content.active {
+      display: block;
+    }
+    
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .schedule-table th, 
+    .schedule-table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .schedule-table th {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .schedule-table tr:hover td {
+      background-color: #f9f9f9;
+    }
+    
+    /* Instructor Section */
+    .instructor-profile {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+    
+    .instructor-image {
+      flex: 1;
+      position: relative;
+      min-height: 400px;
+      background: linear-gradient(to right, white, #f9f9f9);
+    }
+    
+    .instructor-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .instructor-bio {
+      flex: 1;
+      padding: 50px;
+    }
+    
+    .instructor-bio h3 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .instructor-bio p {
+      margin-bottom: 20px;
+    }
+    
+    .social-links {
+      margin-top: 30px;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+    
+    /* Gallery Section */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 250px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .gallery-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .gallery-item:hover::before,
+    .gallery-item:focus::before {
+      opacity: 1;
+    }
+    
+    .gallery-item:hover img,
+    .gallery-item:focus img {
+      transform: scale(1.1);
+    }
+    
+    /* Testimonials Section */
+    .testimonials-container {
+      position: relative;
+    }
+    
+    .testimonial-slider {
+      overflow: hidden;
+    }
+    
+    .testimonial-slide {
+      background-color: white;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      position: relative;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .testimonial-slide.active {
+      opacity: 1;
+    }
+    
+    .testimonial-content {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    .testimonial-content::before,
+    .testimonial-content::after {
+      content: '"';
+      font-size: 2rem;
+      color: var(--primary);
+      opacity: 0.3;
+      position: absolute;
+    }
+    
+    .testimonial-content::before {
+      top: -20px;
+      left: -15px;
+    }
+    
+    .testimonial-content::after {
+      bottom: -40px;
+      right: -15px;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .testimonial-author img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    
+    .author-info h4 {
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+    
+    .author-info p {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    
+    .testimonial-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .testimonial-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ddd;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-dot.active {
+      background-color: var(--primary);
+      transform: scale(1.2);
+    }
+    
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      gap: 50px;
+    }
+    
+    .contact-info {
+      flex: 1;
+      background-color: var(--primary);
+      color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .contact-info h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: white;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+    
+    .contact-icon {
+      font-size: 1.2rem;
+      margin-right: 15px;
+      margin-top: 5px;
+      color: var(--secondary);
+    }
+    
+    .contact-text h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+    
+    .contact-text a {
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-text a:hover {
+      color: var(--secondary);
+    }
+    
+    .social-media {
+      margin-top: 30px;
+    }
+    
+    .social-media h4 {
+      margin-bottom: 15px;
+    }
+    
+    .social-links-contact {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .social-links-contact a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links-contact a:hover {
+      background-color: white;
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .contact-form {
+      flex: 1;
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .submit-btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--text);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-col h3 {
+      color: white;
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--primary);
+    }
+    
+    .footer-col p {
+      margin-bottom: 20px;
+    }
+    
+    .quick-links li {
+      margin-bottom: 10px;
+      list-style: none;
+    }
+    
+    .quick-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .quick-links a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+    
+    .footer-contact-item {
+      display: flex;
+      margin-bottom: 15px;
+    }
+    
+    .footer-contact-item i {
+      margin-right: 15px;
+      color: var(--primary);
+    }
+    
+    .footer-social-links {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .footer-social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-social-links a:hover {
+      background-color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+    
+    /* Animation Classes */
+    .animate-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.5s ease;
+    }
+    
+    .animate-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .about-content,
+      .instructor-profile,
+      .contact-container {
+        flex-direction: column;
+      }
+      
+      .instructor-image {
+        min-height: 300px;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .hero h1 {
+        font-size: 3rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header-container {
+        padding: 15px 0;
+      }
+      
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-dark);
+        flex-direction: column;
+        padding: 20px 0;
+      }
+      
+      nav ul.active {
+        display: flex;
+      }
+      
+      nav li {
+        margin: 0;
+      }
+      
+      nav a {
+        padding: 12px 30px;
+        display: block;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero {
+        height: auto;
+        min-height: auto;
+        padding: 150px 0 80px;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .btn-outline {
+        margin: 15px 0 0;
+        display: block;
+      }
+      
+      .section {
+        padding: 70px 0;
+      }
+      
+      .schedule-container {
+        padding: 25px;
+      }
+      
+      .testimonial-slide {
+        padding: 30px;
+      }
+      
+      .contact-info,
+      .contact-form {
+        padding: 30px;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .logo-text {
+        font-size: 1.2rem;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .schedule-tabs {
+        flex-wrap: wrap;
+      }
+      
+      .schedule-tab {
+        flex: 1 0 50%;
+        text-align: center;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-container">
+      <div class="logo-container">
+        <img src="utsavgarbaclasseslogo.jpg" alt="Utsav Garba Classes Logo" class="logo">
+        <span class="logo-text">Utsav Garba Classes</span>
+      </div>
+      
+      <nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul id="navMenu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#instructor">Instructor</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="animate__animated animate__fadeInDown">Learn Traditional Garba with Dr. Montu Chadotara</h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">Join Utsav Garba Classes to learn the vibrant art of garba with expert guidance for all ages and skill levels.</p>
+      <div class="animate__animated animate__fadeInUp animate__delay-2s">
+        <a href="#classes" class="btn">Join a Class</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Garba</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text animate-up">
+            <p>Garba is a traditional folk dance from Gujarat, India, performed to celebrate culture, rhythm, and community spirit with colorful clothes and joyful music. The dance form originates from the devotional Garba dances that were performed in honor of Goddess Durga.</p>
+            <p>At Utsav Garba Classes, we preserve the authentic form of this beautiful dance while also incorporating modern elements to make it accessible to everyone. Our classes cater to beginners who want to learn the basics as well as advanced dancers looking to refine their skills.</p>
+            <p>Garba is more than just a dance - it's a celebration of life, community, and tradition. Through our classes, we aim to keep this rich cultural tradition alive while making it enjoyable for everyone.</p>
+            <a href="#classes" class="btn" style="display: inline-block; margin-top: 20px;">Our Classes</a>
+          </div>
+          <div class="about-image animate-up">
+            <img src="data:image/jpeg;base64,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" alt="People dancing Garba">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section class="section" id="classes" style="background-color: #f9f9f9;">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Classes</h2>
+        </div>
+        <div class="classes-grid">
+          <div class="class-card animate-up" style="transition-delay: 0.1s;">
+            <div class="class-card-header">
+              <a href="beginner page.html">
+              <img src="https://images.unsplash.com/photo-1567942712661-82b9b407abbf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Beginner Garba Class">
+              </a>
+            </div>
+            <div class="class-card-body">
+              <h3>Beginner Class</h3>
+              <p>Perfect for those new to Garba. Learn basic steps, rhythm, and the fundamentals of this beautiful dance form in a supportive environment.</p>
+              <div class="price">₹1,000/month</div>
+              <a href="beginner page.html" class="btn">Enroll Now</a>
+            </div>
+          </div>
+          
+          <div class="class-card animate-up" style="transition-delay: 0.2s;">
+            <div class="class-card-header">
+              <a href="advance garba page.html">
+              <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Intermediate Garba Class">
+              </a>
+            </div>
+            <div class="class-card-body">
+              <h3>Advanced Class</h3>
+              <p>Build on your foundation with more complex footwork and choreography. Suitable for those with basic Garba experience.</p>
+              <div class="price">₹1,500/month</div>
+              <a href="advance garba page.html" class="btn">Enroll Now</a>
+            </div>
+          </div>
+          
+          <div class="class-card animate-up" style="transition-delay: 0.3s;">
+            <div class="class-card-header">
+              <a href="Privet garba page.html">
+              <img src="data:image/jpeg;base64,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" alt="Advanced Garba Class">
+              </a>
+            </div>
+            <div class="class-card-body">
+              <h3>Privet Class</h3>
+              <p>Master intricate patterns and fast-paced choreography. For experienced dancers looking to perfect their technique.</p>
+              <div class="price">₹1,200/month</div>
+              <a href="Privet garba page.html" class="btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="section-title">
+          <h2>Class Schedule</h2>
+        </div>
+        <div class="schedule-container animate-up">
+          <div class="schedule-tabs">
+            <div class="schedule-tab active" data-tab="weekdays">Weekdays</div>
+            <div class="schedule-tab" data-tab="special">Special Classes</div>
+          </div>
+          
+          <div class="schedule-content active" id="weekdays">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Time</th>
+                  <th>Class</th>
+                  <th>Instructor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monday - Saturday</td>
+                  <td>6:00 PM - 7:30 PM</td>
+                  <td>Ladies batch</td>
+                  <td>Dr. Montu Chadotara</td>
+                </tr>
+                <tr>
+                  <td>Monday - Saturday</td>
+                  <td>9:00 PM - 10:30 PM</td>
+                  <td>Boys Batch</td>
+                  <td>Dr. Montu Chadotara</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>6:30 PM - 7:30 PM</td>
+                  <td>Intermediate</td>
+                  <td>Dr. Montu Chadotara</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>6:30 PM - 7:30 PM</td>
+                  <td>Beginner</td>
+                  <td>Dr. Montu Chadotara</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>6:00 PM - 7:30 PM</td>
+                  <td>Advanced</td>
+                  <td>Dr. Montu Chadotara</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="schedule-content" id="special">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Navratri Workshop</td>
+                  <td>October 1-10</td>
+                  <td>6:00 PM - 8:00 PM</td>
+                  <td>Special 10-day intensive</td>
+                </tr>
+                <tr>
+                  <td>Wedding Choreography</td>
+                  <td>By appointment</td>
+                  <td>Flexible</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="section" id="instructor" style="background-color: #f9f9f9;">
+      <div class="container">
+        <div class="section-title">
+          <h2>Meet Your Instructor</h2>
+        </div>
+        <div class="instructor-profile animate-up">
+          <div class="instructor-image">
+            <img src="11.jpg" alt="Dr. Montu Chadotara">
+          </div>
+          <div class="instructor-bio">
+            <h3>Dr. Montu Chadotara</h3>
+            <p>With over 25 years of experience in performing and teaching Garba, Dr. Chadotara is a renowned expert in Gujarati folk dance. He holds a PhD in Performing Arts from Gujarat University and has trained under some of the most respected Garba masters in India.</p>
+            <p>Dr. Chadotara has performed at major cultural festivals across India and has taught thousands of students worldwide. His teaching methodology emphasizes not just the steps but also the cultural significance and spiritual aspects of Garba.</p>
+            <p>"Garba is not just a dance—it's a celebration of life, culture, and community," says Dr. Chadotara. "My goal is to share this beautiful art form while preserving its traditional roots."</p>
+            
+            <div class="social-links">
+              <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-youtube"></i></a>
+              <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Gallery</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item animate-up" style="transition-delay: 0.1s;">
+            <img src="https://images.unsplash.com/photo-1604836360658-1287b50e65aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Garba class in session">
+          </div>
+          <div class="gallery-item animate-up" style="transition-delay: 0.2s;">
+            <img src="https://images.unsplash.com/photo-1623165274395-f2b0d0ee6def?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Students performing Garba">
+          </div>
+          <div class="gallery-item animate-up" style="transition-delay: 0.3s;">
+            <img src="https://images.unsplash.com/photo-1566755206725-b184371506aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Traditional costumes">
+          </div>
+          <div class="gallery-item animate-up" style="transition-delay: 0.4s;">
+            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Garba performance">
+          </div>
+          <div class="gallery-item animate-up" style="transition-delay: 0.5s;">
+            <img src="https://images.unsplash.com/photo-1543769652-19ccce16af0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dance circle">
+          </div>
+          <div class="gallery-item animate-up" style="transition-delay: 0.6s;">
+            <img src="https://images.unsplash.com/photo-1518893880017-cd123c687f18?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Garba instruments">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" style="background-color: #f9f9f9;">
+      <div class="container">
+        <div class="section-title">
+          <h2>What Our Students Say</h2>
+        </div>
+        <div class="testimonials-container animate-up">
+          <div class="testimonial-slider">
+            <div class="testimonial-slide active">
+              <div class="testimonial-content">
+                I've been attending classes at Utsav Garba for a year now, and it's been an incredible journey. Dr. Chadotara's teaching methods are excellent, and I can see how much I've improved. The atmosphere is welcoming and fun!
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Priya Sharma">
+                <div class="author-info">
+                  <h4>Priya Sharma</h4>
+                  <p>Student (Beginner to Intermediate)</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-slide">
+              <div class="testimonial-content">
+                As someone who grew up outside Gujarat, I was nervous about learning Garba. But the instructors at Utsav made the process enjoyable and easy to understand. I now feel confident enough to dance at Navratri celebrations!
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Rahul Mehta">
+                <div class="author-info">
+                  <h4>Rahul Mehta</h4>
+                  <p>Student (Beginner)</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-slide">
+              <div class="testimonial-content">
+                The advanced classes have taken my dancing to a new level. The attention to detail in technique and the cultural knowledge shared has enriched my understanding of Garba as more than just dance steps.
+              </div>
+              <div class="testimonial-author">
+                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Anjali Patel">
+                <div class="author-info">
+                  <h4>Anjali Patel</h4>
+                  <p>Student (Advanced)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-nav">
+            <div class="testimonial-dot active" data-slide="0"></div>
+            <div class="testimonial-dot" data-slide="1"></div>
+            <div class="testimonial-dot" data-slide="2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+        </div>
+        <div class="contact-container animate-up">
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Address</h4>
+                <p> Kailashbag Opposite Uco Bank 3<sup>rd</sup> Floar , gondal-360311</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <a href="tel:9998485658">+91 99984 85658</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <a href="mailto:tapanchadotra18@gmail.com">tapanchadotra18@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="social-media">
+              <h4>Follow Us</h4>
+              <div class="social-links-contact">
+                <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" class="form-control" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" class="form-control" required></textarea>
+              </div>
+              
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Utsav Garba Classes</h3>
+          <p>Celebrating Gujarati culture through traditional dance. Learn authentic Garba from expert instructors in a welcoming environment.</p>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/utsav_garba_classes?igsh=MXQ2dWN3eXY2YTM1eQ=="><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="quick-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Garba</a></li>
+            <li><a href="#classes">Our Classes</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#instructor">Instructor</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>123 Garba Road, Ahmedabad, Gujarat 380001</p>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <p>+91 99984 85658</p>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>tapanchadotra18@gmail.com</p>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Class Hours</h3>
+          <p><strong>Weekdays:</strong> 5:30 PM - 8:00 PM</p>
+          <p><strong>Weekends:</strong> 10:00 AM - 6:00 PM</p>
+          <p>Special workshop timings may vary</p>
+          <a href="#schedule" class="btn" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9rem;">View Full Schedule</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 Utsav Garba Classes. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navMenu = document.getElementById('navMenu');
+      
+      mobileMenuBtn.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll('#navMenu a').forEach(link => {
+        link.addEventListener('click', function() {
+          navMenu.classList.remove('active');
+        });
+      });
+      
+      // Sticky Header
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+      
+      // Schedule Tabs
+      const scheduleTabs = document.querySelectorAll('.schedule-tab');
+      const scheduleContents = document.querySelectorAll('.schedule-content');
+      
+      scheduleTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const tabId = this.getAttribute('data-tab');
+          
+          // Remove active class from all tabs and contents
+          scheduleTabs.forEach(t => t.classList.remove('active'));
+          scheduleContents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to clicked tab and corresponding content
+          this.classList.add('active');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Testimonial Slider
+      const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+      const testimonialDots = document.querySelectorAll('.testimonial-dot');
+      let currentSlide = 0;
+      
+      function showSlide(index) {
+        testimonialSlides.forEach(slide => slide.classList.remove('active'));
+        testimonialDots.forEach(dot => dot.classList.remove('active'));
+        
+        testimonialSlides[index].classList.add('active');
+        testimonialDots[index].classList.add('active');
+        currentSlide = index;
+      }
+      
+      testimonialDots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+          showSlide(index);
+        });
+      });
+      
+      // Auto slide change
+      setInterval(function() {
+        let nextSlide = currentSlide + 1;
+        if (nextSlide >= testimonialSlides.length) nextSlide = 0;
+        showSlide(nextSlide);
+      }, 5000);
+      
+      // Back to Top Button
+      const backToTopBtn = document.getElementById('backToTop');
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('active');
+        } else {
+          backToTopBtn.classList.remove('active');
+        }
+      });
+      
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Smooth Scrolling for all links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+            
+            // Update URL without reloading page
+            history.pushState(null, null, targetId);
+          }
+        });
+      });
+      
+      // Scroll Animation
+      function checkScroll() {
+        const elements = document.querySelectorAll('.animate-up');
+        
+        elements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementTop < windowHeight - 100) {
+            element.classList.add('show');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', checkScroll);
+      window.addEventListener('load', checkScroll);
+      
+      // Form Submission
+      const contactForm = document.getElementById('contactForm');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Simple form validation
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const phone = document.getElementById('phone').value;
+          const message = document.getElementById('message').value;
+          
+          if (!name || !email || !phone || !message) {
+            alert('Please fill in all fields');
+            return;
+          }
+          
+          // Here you would normally send the form data to a server
+          alert('Thank you for your message! We will contact you soon.');
+          contactForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

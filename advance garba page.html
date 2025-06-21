@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Garba Classes - Utsav Garba</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --garba-orange: #FF7F24;
+            --garba-green: #2E8B57;
+            --garba-pink: #FF69B4;
+            --garba-gold: #FFD700;
+            --text-dark: #333;
+            --text-light: #f8f8f8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--garba-orange), var(--garba-pink));
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .dandiya-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5l6 3.75v.94l-6 6.01-6-6.01v-.94L12 4.5zm0 12.29l6-3.76V15l-6 4-6-4v1.03l6 3.76z"/></svg>') no-repeat;
+            background-size: contain;
+            opacity: 0.3;
+            animation: float 3s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--garba-orange);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+            margin: 0.5rem;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .secondary-button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--garba-orange);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            color: var(--garba-green);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .advanced-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 5px solid var(--garba-gold);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h4 {
+            color: var(--garba-green);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-card h4 i {
+            margin-right: 10px;
+            color: var(--garba-orange);
+        }
+        
+        .choreography-showcase {
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .dancers-container {
+            position: relative;
+            height: 300px;
+            margin: 2rem 0;
+        }
+        
+        .dancer {
+            position: absolute;
+            width: 80px;
+            height: 120px;
+            background: linear-gradient(45deg, var(--garba-orange), var(--garba-pink));
+            border-radius: 40px;
+            animation: dance 2s infinite ease-in-out;
+        }
+        
+        .dancer:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .dancer:nth-child(2) { left: 30%; background: linear-gradient(45deg, var(--garba-green), var(--garba-gold)); animation-delay: 0.2s; }
+        .dancer:nth-child(3) { left: 50%; background: linear-gradient(45deg, var(--garba-pink), var(--garba-orange)); animation-delay: 0.4s; }
+        .dancer:nth-child(4) { left: 70%; background: linear-gradient(45deg, var(--garba-gold), var(--garba-green)); animation-delay: 0.6s; }
+        .dancer:nth-child(5) { left: 90%; background: linear-gradient(45deg, var(--garba-orange), var(--garba-gold)); animation-delay: 0.8s; }
+        
+        @keyframes dance {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-50px) rotate(5deg); }
+            50% { transform: translateY(0) rotate(-5deg); }
+            75% { transform: translateY(-30px) rotate(5deg); }
+        }
+        
+        .testimonial {
+            background-color: #f0f8ff;
+            border-left: 5px solid var(--garba-orange);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-card {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-card i {
+            font-size: 2.5rem;
+            color: var(--garba-orange);
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .facebook { background-color: #3b5998; }
+        .instagram { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+        .youtube { background-color: #ff0000; }
+        .linkedin { background-color: #0077b5; }
+        
+        .social-link:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .performance-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            background-color: #eee;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item svg {
+            width: 60%;
+            height: 60%;
+            fill: var(--garba-pink);
+        }
+        
+        footer {
+            background: linear-gradient(90deg, var(--garba-green), var(--garba-orange));
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+        
+        .chat-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, var(--garba-orange), var(--garba-pink));
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-size: 1.5rem;
+            z-index: 100;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .dancer {
+                width: 60px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="dandiya-decoration" style="top: 20%; left: 10%;"></div>
+        <div class="dandiya-decoration" style="top: 60%; right: 15%; transform: rotate(45deg);"></div>
+        <div class="header-content">
+            <h1>Advanced Garba Classes</h1>
+            <p class="subtitle">Elevate your dance skills with our professional-level training</p>
+            <div class="cta-buttons">
+                <a href="#register" class="cta-button">Enroll Now</a>
+                <a href="#contact" class="cta-button secondary-button">Contact Instructor</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2>Master Complex Garba Techniques</h2>
+            <p>Our advanced classes are designed for experienced dancers who want to take their Garba skills to professional levels. Learn intricate footwork patterns, complex hand movements, and performance-quality choreography.</p>
+            
+            <div class="advanced-features">
+                <div class="feature-card">
+                    <h4><i class="fas fa-shoe-prints"></i> Advanced Footwork</h4>
+                    <p>Master rapid footwork patterns including three-beat spins, cross-steps, and syncopated rhythms that will elevate your dance to performance level.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-hands"></i> Complex Hand Movements</h4>
+                    <p>Learn sophisticated mudras (hand gestures) and arm patterns that add grace and storytelling to your dance.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-users"></i> Group Choreography</h4>
+                    <p>Develop the skills to perform in coordinated groups with complex formations and synchronized movements.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-music"></i> Musical Interpretation</h4>
+                    <p>Learn to interpret complex musical structures and improvise within traditional Garba frameworks.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-trophy"></i> Competition Training</h4>
+                    <p>Specialized coaching for those preparing for Garba competitions with performance critique and stage techniques.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-chalkboard-teacher"></i> Master Workshops</h4>
+                    <p>Monthly workshops with renowned Garba performers and choreographers from India.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Advanced Choreography Showcase</h2>
+            <p>Our advanced students perform complex choreography that combines traditional Garba with contemporary influences while maintaining cultural authenticity.</p>
+            
+            <div class="choreography-showcase">
+                <div class="dancers-container">
+                    <div class="dancer"></div>
+                    <div class="dancer"></div>
+                    <div class="dancer"></div>
+                    <div class="dancer"></div>
+                    <div class="dancer"></div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"The advanced classes transformed my dancing completely. Within six months, I went from intermediate to performing at major Navratri events. The attention to detail in footwork and musicality is unparalleled."</p>
+                <p class="testimonial-author">- Arjun Mehta, Advanced Student & Performer</p>
+            </div>
+        </section>
+        
+        <section id="contact" class="section">
+            <h2>Contact Our Advanced Instructors</h2>
+            <p>Connect with our professional instructors to discuss your advanced training needs:</p>
+            
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Advanced Class Coordinator</h4>
+                    <p>+1 (555) 987-6543</p>
+                    <p>Mon-Fri: 10AM-6PM</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>advanced@utsavgarba.com</p>
+                    <p>Response within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Studio Location</h4>
+                    <p>456 Performance Ave</p>
+                    <p>Gujarat Dance Academy</p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://facebook.com/utsavgarba" class="social-link facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/utsavgarba" class="social-link instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/utsavgarba" class="social-link youtube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://linkedin.com/company/utsavgarba" class="social-link linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Performance Gallery</h2>
+            <p>View highlights from our advanced students' performances:</p>
+            
+            <div class="performance-gallery">
+                <div class="gallery-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2L4 7v10l8 5 8-5V7l
